@@ -1,0 +1,94 @@
+# Java Collections
+
+
+### Heap (Priority Queue)
+1. Min heap  -> smallest element is at the top
+
+```
+Queue<Integer> minHeap = new PriorityQueue<>();
+```
+or
+
+```
+Queue<Integer> minHeap = new PriorityQueue<>((a,b) -> a-b)
+```
+
+2. Max heap  -> largest element is at the top
+
+```
+Queue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+```
+
+or
+```
+Queue<Integer> maxHeap = new PriorityQueue<>((a,b) -> b-a)
+```
+
+#### Common use cases [https://favtutor.com/blogs/learn-about-priority-queue-in-java-and-about-its-methods-with-different-examples]
+
+###### 1. Adding Elements to a Priority Queue
+
+> To add elements to a priority queue, we can use the add(E element) or offer(E element) methods. Both methods insert the specified element into the priority queue. If the queue is full, the add() method throws an exception, while the offer() method returns false.
+
+```
+priorityQueue.add(10);
+priorityQueue.offer(20);
+```
+###### 2. Accessing Elements in a Priority Queue
+
+> To access the elements in a priority queue, we can use the peek() method. This method retrieves, but does not remove, the head of the queue, i.e., the element with the highest priority.
+
+
+```
+Integer element = priorityQueue.peek();
+```
+
+
+###### 3. Removing Elements from a Priority Queue
+
+> To remove elements from a priority queue, we can use the poll() method. This method retrieves and removes the head of the queue, i.e., the element with the highest priority. If the queue is empty, the poll() method returns null.
+
+```
+Integer element = priorityQueue.poll();
+```
+
+
+
+###### 4. Custom Ordering
+
+> If you want to order the elements in the priority queue based on a custom ordering, you can provide a custom comparator to the constructor. A comparator is an object that compares two elements and determines their order. You can define your own comparator by implementing the Comparator interface. Here's an example of creating a priority queue with a custom comparator that orders strings based on their length:
+ 
+```
+PriorityQueue<String> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(String::length));
+```
+
+###### Example 1:
+
+```
+PriorityQueue<String> taskQueue = new PriorityQueue<>();
+taskQueue.add("High priority task");
+taskQueue.add("Medium priority task");
+taskQueue.add("Low priority task");
+
+while (!taskQueue.isEmpty()) {
+String task = taskQueue.poll();
+System.out.println("Processing task: " + task);
+}
+```
+
+#### Java Priority Blocking Queue (Thread Safe)
+In a multi-threaded environment, it's important to ensure thread safety when using a priority queue. The PriorityQueue class in Java is not thread-safe. However, Java provides the PriorityBlockingQueue class, which is an implementation of the BlockingQueue interface and offers thread-safe operations on a priority queue.
+
+The PriorityBlockingQueue class provides all the functionality of a priority queue while ensuring thread safety. It allows multiple threads to access and modify the queue concurrently without the need for external synchronization.
+
+To use a PriorityBlockingQueue, you can create an instance of it and use the same methods as a regular priority queue.
+
+```
+PriorityBlockingQueue<Integer> priorityQueue = new PriorityBlockingQueue<>();
+priorityQueue.add(10);
+priorityQueue.add(20);
+
+Integer element = priorityQueue.poll();
+```
+
+
