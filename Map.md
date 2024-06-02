@@ -5,7 +5,7 @@
 
 #### Sort A Map By Value
 
-```
+```java
 public static HashMap<String, Integer> sortByValue(HashMap<String, Integer> hm)
     {
         // Create a list from elements of HashMap
