@@ -9,3 +9,8 @@ FROM products
 WHERE product_id = 1
 
 ```
+Alternative way 
+
+```sql
+SELECT meta_data->'$.review' FROM products WHERE product_id = 76;
+```
