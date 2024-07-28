@@ -92,6 +92,11 @@ Objects which survived multiple GC are then promoted to OLD Gen space
 <img width="1432" alt="Screenshot 2024-07-27 at 1 59 40 PM" src="https://github.com/user-attachments/assets/08d22da2-ea78-46b4-9603-b76396f97792">
 
 
+### Relation between Object Aging and Memory Leak
+
+<img width="1432" alt="Screenshot 2024-07-28 at 7 47 18 PM" src="https://github.com/user-attachments/assets/acfbc40b-9999-4c08-be3c-cedf77679e7f">
+
+
 ### Common JVM Commands to specify the different parts of heap size
 
 <img width="1432" alt="Screenshot 2024-07-27 at 2 01 14 PM" src="https://github.com/user-attachments/assets/43f0c1ad-96a6-4b98-bc7a-dd1c576f608a">
@@ -215,6 +220,7 @@ Here even after each GC memory is not reclaimed completely and increases gradual
 ### References:
 
 - https://www.youtube.com/watch?v=ZMaQDFTbWOo&list=PLOktGWstEblqNOq05Kj6YIdkEAz6Ktv60&index=12
+- https://www.youtube.com/watch?v=E2KYTXKUsT4
 
 
 
