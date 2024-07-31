@@ -221,6 +221,7 @@ Here even after each GC memory is not reclaimed completely and increases gradual
 
 - https://www.youtube.com/watch?v=ZMaQDFTbWOo&list=PLOktGWstEblqNOq05Kj6YIdkEAz6Ktv60&index=12
 - https://www.youtube.com/watch?v=E2KYTXKUsT4
+- https://medium.com/@RamLakshmanan/interesting-garbage-collection-patterns-b7914e595dcb
 
 
 
