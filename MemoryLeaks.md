@@ -216,13 +216,24 @@ Here even after each GC memory is not reclaimed completely and increases gradual
 <img width="1432" alt="Screenshot 2024-07-27 at 2 44 37 PM" src="https://github.com/user-attachments/assets/7d4a7993-1387-4284-92c9-77be1aa6d085">
 
 
+### Notes:
+
+Usually when we take heap dump a GC is run make sure to avoid it in case if it is required (ref - https://stackoverflow.com/questions/32271731/why-is-my-java-heap-dump-size-much-smaller-than-used-memory ,
+or use below command
+```sh
+ jcmd <PID> GC.heap_dump -all <filename>
+```
+)
+
 
 ### References:
 
 - https://www.youtube.com/watch?v=ZMaQDFTbWOo&list=PLOktGWstEblqNOq05Kj6YIdkEAz6Ktv60&index=12
 - https://www.youtube.com/watch?v=E2KYTXKUsT4
 - https://medium.com/@RamLakshmanan/interesting-garbage-collection-patterns-b7914e595dcb
-
+- https://medium.com/illegalarguments/debugging-spring-boot-applications-for-memory-leaks-4ba5f8bee75a
+- https://www.linkedin.com/pulse/detecting-fixing-memory-leaks-java-based-applications-saurav-kumar (**Imp**)
+- https://medium.com/@nexzensoftware/mastering-memory-leak-detection-in-java-spring-boot-tools-and-techniques-for-optimal-performance-69479228a454
 
 
 
